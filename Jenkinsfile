@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build Docker Image') {
       steps {
-        sh 'docker build -t SimpleApp'
+        sh 'docker build -t SimpleApp .'
       }
     }
     stage('Test Container') {

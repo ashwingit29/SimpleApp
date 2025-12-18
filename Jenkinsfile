@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Build Docker Image') {
       steps {
-        sh 'docker build -t devops-demo .'
+        sh 'docker build -t SimpleApp'
       }
     }
     stage('Test Container') {
       steps {
-        sh 'docker run --rm devops-demo'
+        sh 'docker run --rm SimpleApp'
       }
     }
   }
